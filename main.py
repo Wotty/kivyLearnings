@@ -9,14 +9,22 @@ class MyGrid(GridLayout):
     def __init__(self, **kwargs):
         super(MyGrid,self).__init__(**kwargs)
         self.cols = 2
-        self.add_widget(Label(text=="Name: "))
+        self.add_widget(Label(text="First Name: "))
         self.name = TextInput(multiline=False)
-        
+        self.add_widget(self.name)
+
+        self.add_widget(Label(text = "Last Name: "))
+        self.lastname = TextInput(multiline=False)
+        self.add_widget(self.lastname)
+
+        self.add_widget(Label(text = "Email: "))
+        self.email = TextInput(multiline=False)
+        self.add_widget(self.email)
 
 
 class MyApp(App):
     def build(self):
-            return MyGrid
+            return MyGrid()
 
-if __name__=="__main__":
+if __name__== "__main__":
     MyApp().run()
