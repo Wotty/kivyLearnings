@@ -12,7 +12,7 @@ class Widgets(Widget):
         show_popup()
 
 
-class P(FloatLayout):
+class Popup(FloatLayout):
     pass
 
 
@@ -22,7 +22,7 @@ class MyApp(App):
 
 
 def show_popup():
-    show = P()
+    show = Popup()
 
     popupWindow = Popup(title="Popup Window", content=show, size_hint=(None, None), size=(400, 400))
 
